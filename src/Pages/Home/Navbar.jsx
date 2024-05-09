@@ -58,7 +58,7 @@ const Navbar = () => {
           </div>
           <ul
             tabIndex={0}
-            className="dropdown-content menu menu-sm mt-3 p-2 shadow bg-base-100 rounded-box w-52"
+            className="dropdown-content z-50 menu menu-sm mt-3 p-2 shadow bg-base-100 rounded-box w-52"
           >
             {navLinks}
           </ul>
@@ -83,7 +83,7 @@ const Navbar = () => {
           <input type="checkbox" className="toggle theme-controller" />
         </label>
         {user ? (
-          <div className="dropdown dropdown-bottom dropdown-hover dropdown-end">
+          <div className="dropdown z-50 dropdown-bottom dropdown-hover dropdown-end">
             <div tabIndex={0} role="button" className="flex items-center cursor-pointer">
               <img
                 src={user.photoURL}
@@ -97,16 +97,16 @@ const Navbar = () => {
             >
               <li>{user?.displayName}</li>
               <li>
-                <NavLink>Add Services</NavLink>
+                <NavLink to='/addServices'>Add Services</NavLink>
               </li>
               <li>
-                <NavLink></NavLink>
+                <NavLink to='/manageServices'>Manage Services</NavLink>
               </li>
               <li>
-                <NavLink></NavLink>
+                <NavLink to='/bookedServices'>Booked Services</NavLink>
               </li>
               <li>
-                <NavLink></NavLink>
+                <NavLink to='/serviceToDo'>Service To Do</NavLink>
               </li>
               <li className="mt-4">
                 <button

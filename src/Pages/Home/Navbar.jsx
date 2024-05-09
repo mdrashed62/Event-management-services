@@ -1,4 +1,4 @@
-import { useContext } from "react";
+import { useContext, useState } from "react";
 
 import { AuthContext } from "../../Providers/AuthProvider";
 import logo from '../../assets/logo.jpg'
@@ -6,6 +6,7 @@ import { Link, NavLink, useNavigate } from "react-router-dom";
 
 const Navbar = () => {
 
+    const [theme, setTheme] = useState("light");
 
     const { user, logOut } = useContext(AuthContext);
     const navigate = useNavigate();
@@ -15,6 +16,12 @@ const Navbar = () => {
         .then(() => navigate("/"))
         .catch();
     };
+
+  const handleTheme = () => {
+    const newTheme = theme === "light" ? "dark" : "light";
+    setTheme(newTheme);
+    document.documentElement.setAttribute("data-theme", newTheme);
+  };
   
     const navLinks = (
        <>
@@ -69,7 +76,12 @@ const Navbar = () => {
         <ul className="menu menu-horizontal px-1">{navLinks}</ul>
       </div>
 
+
+
       <div className="navbar-end flex items-center">
+      <label onClick={handleTheme} className="flex cursor-pointer ml-6 mr-4 gap-2">
+          <input type="checkbox" className="toggle theme-controller" />
+        </label>
         {user ? (
           <div className="dropdown dropdown-bottom dropdown-hover dropdown-end">
             <div tabIndex={0} role="button" className="flex items-center cursor-pointer">
@@ -84,6 +96,18 @@ const Navbar = () => {
               className="dropdown-content z-[1] menu p-2 shadow bg-base-100 rounded-box w-52"
             >
               <li>{user?.displayName}</li>
+              <li>
+                <NavLink>Add Services</NavLink>
+              </li>
+              <li>
+                <NavLink></NavLink>
+              </li>
+              <li>
+                <NavLink></NavLink>
+              </li>
+              <li>
+                <NavLink></NavLink>
+              </li>
               <li className="mt-4">
                 <button
                   onClick={handleSignOut}

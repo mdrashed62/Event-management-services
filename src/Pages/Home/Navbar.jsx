@@ -32,7 +32,25 @@ const Navbar = () => {
        <li className="ml-4 mr-4">
         <NavLink to='/services'>Services</NavLink>
        </li>
-       
+       <li>
+            <div className="dropdown dropdown-bottom">
+            <button tabIndex={0}>Dashboard</button>
+            <ul tabIndex={0} className="dropdown-content z-[1] menu p-2 shadow bg-green-300 rounded-box w-52">
+              <li>
+                <NavLink to='/addServices'>Add Services</NavLink>
+              </li>
+              <li className="mt-2">
+                <NavLink to='/manageServices'>Manage Services</NavLink>
+              </li>
+              <li className="mt-2 mb-2">
+                <NavLink to='/bookedServices'>Booked Services</NavLink>
+              </li>
+              <li>
+                <NavLink to='/serviceToDo'>Service To Do</NavLink>
+              </li>
+            </ul>
+            </div>
+       </li>
        </>
     );
 
@@ -68,7 +86,7 @@ const Navbar = () => {
           <div className="w-12 h-12">
             <img className="rounded-lg" src={logo} alt="Logo" />
           </div>
-          <p className="text-violet-600">Epic Eventistry</p>
+          <p className="text-green-500 ml-4 font-bold">Epic Eventistry</p>
         </div>
       </div>
 
@@ -96,18 +114,6 @@ const Navbar = () => {
               className="dropdown-content z-[1] menu p-2 shadow bg-base-100 rounded-box w-52"
             >
               <li>{user?.displayName}</li>
-              <li>
-                <NavLink to='/addServices'>Add Services</NavLink>
-              </li>
-              <li>
-                <NavLink to='/manageServices'>Manage Services</NavLink>
-              </li>
-              <li>
-                <NavLink to='/bookedServices'>Booked Services</NavLink>
-              </li>
-              <li>
-                <NavLink to='/serviceToDo'>Service To Do</NavLink>
-              </li>
               <li className="mt-4">
                 <button
                   onClick={handleSignOut}

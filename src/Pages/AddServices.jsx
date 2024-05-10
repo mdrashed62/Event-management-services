@@ -5,7 +5,7 @@ import Swal from "sweetalert2";
 
 const AddServices = () => {
   const { user } = useContext(AuthContext);
-  document.title = "Add Service | ";
+  document.title = "Add Service | Epic Eventistry ";
 
   const handleAddServices = (e) => {
     e.preventDefault();

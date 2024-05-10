@@ -10,6 +10,7 @@ import ServiceToDo from "../Pages/ServiceToDo";
 import Services from "../Pages/Services";
 import Login from "../Components/Login";
 import Register from "../Components/Register";
+import ServiceDetails from "../Pages/ServiceDetails";
 
 
 const router = createBrowserRouter([
@@ -30,8 +31,13 @@ const router = createBrowserRouter([
             element: <Register></Register>
         },
         {
-           path: '/services',
+           path: '/allServices',
            element: <Services></Services>
+        },
+        {
+            path: '/serviceDetails/:id',
+            element: <ServiceDetails></ServiceDetails>,
+            loader: () => fetch('http://localhost:5000/services')
         },
         {
             path: '/addServices',

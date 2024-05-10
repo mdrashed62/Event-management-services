@@ -30,12 +30,12 @@ const Navbar = () => {
        </li>
 
        <li className="ml-4 mr-4">
-        <NavLink to='/services'>Services</NavLink>
+        <NavLink to='/allServices'>All Services</NavLink>
        </li>
        <li>
-            <div className="dropdown dropdown-bottom">
+            <div className="dropdown dropdown-bottom z-50">
             <button tabIndex={0}>Dashboard</button>
-            <ul tabIndex={0} className="dropdown-content z-[1] menu p-2 shadow bg-green-300 rounded-box w-52">
+            <ul tabIndex={0} className="dropdown-content z-[1] font-semibold menu p-2 shadow bg-sky-500 rounded-box w-52">
               <li>
                 <NavLink to='/addServices'>Add Services</NavLink>
               </li>

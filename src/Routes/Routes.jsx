@@ -13,6 +13,7 @@ import ServiceDetails from "../Pages/ServiceDetails";
 import ForPurchase from "../Pages/ForPurchase";
 import UpdateServices from "../Pages/UpdateServices";
 import PurchasedServices from "../Pages/PurchasedServices";
+import PrivateRoute from "./PrivateRoute";
 
 
 const router = createBrowserRouter([
@@ -52,15 +53,15 @@ const router = createBrowserRouter([
         },
         {
             path: '/manageServices',
-            element: <ManageServices></ManageServices>
+            element: <PrivateRoute><ManageServices></ManageServices></PrivateRoute>
         },
         {
             path: '/bookedServices',
-            element: <PurchasedServices></PurchasedServices>
+            element: <PrivateRoute><PurchasedServices></PurchasedServices></PrivateRoute>
         },
         {
             path: '/serviceToDo',
-            element: <ServiceToDo></ServiceToDo>
+            element: <PrivateRoute><ServiceToDo></ServiceToDo></PrivateRoute>
         },
         {
             path: '/updateServices/:id',

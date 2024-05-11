@@ -11,6 +11,7 @@ import Services from "../Pages/Services";
 import Login from "../Components/Login";
 import Register from "../Components/Register";
 import ServiceDetails from "../Pages/ServiceDetails";
+import ForPurchase from "../Pages/ForPurchase";
 
 
 const router = createBrowserRouter([
@@ -37,6 +38,11 @@ const router = createBrowserRouter([
         {
             path: '/serviceDetails/:id',
             element: <ServiceDetails></ServiceDetails>,
+            loader: () => fetch('http://localhost:5000/services')
+        },
+        {
+            path:'/forPurchase/:id',
+            element: <ForPurchase></ForPurchase>,
             loader: () => fetch('http://localhost:5000/services')
         },
         {

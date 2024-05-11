@@ -1,4 +1,4 @@
-import { useLoaderData, useParams } from "react-router-dom";
+import { Link, useLoaderData, useParams } from "react-router-dom";
 
 const ServiceDetails = () => {
   const serviceDetails = useLoaderData();
@@ -13,13 +13,15 @@ const ServiceDetails = () => {
     providerImage,
     providerName,
     description,
+    providerEmail,
+    serviceArea,
   } = services;
 
   return (
     <div>
       <div className="flex flex-col px-4 mb-6 lg:px-10">
         <div className="flex-1 flex justify-center">
-          <img className="w-[800px] rounded-lg" src={imgURL} alt="" />
+          <img className="lg:w-[600px] rounded-lg" src={imgURL} alt="" />
         </div>
         <div className="flex-1">
           <div className="border-b-2 text-center lg:text-start">
@@ -27,28 +29,32 @@ const ServiceDetails = () => {
               <h3 className="text-3xl mt-6 font-semibold">{serviceName}</h3>
               {/* <h3 className="text-4xl font-semibold">{countryName}</h3> */}
             </div>
-            <p className="text-xl mt-2 mb-4 font-semibold">{description}</p>
-          </div>
-          <div className="border-b-2 mt-2 text-center font-semibold lg:text-start">
-            <h1 className="text-2xl font-bold">Provider Info:</h1>
-            <div>
-              <div className="avatar">
-                <div className="w-32 rounded">
-                  <img src={providerImage}/>
-                </div>
-              </div>
-              <p className="mb-2">{providerName}</p>
+            <p className=" mt-2 mb-2 font-semibold">{description}</p>
+            <div className="flex gap-8 lg:gap-20 border-t-2">
+            <p className="font-semibold text-2xl">Location: {serviceArea}</p>
+            <p className="font-semibold text-2xl">Service Price: {price}</p>
             </div>
+            
           </div>
-
-          <p className="flex items-center gap-4">
-            <span className="text-xl font-semibold text-center lg:text-start">
-              Visitors Per Year: <p className="mb-2">{price}</p>
-            </span>
-            {/* <p>{visitors}</p> */}
-          </p>
-
-          <hr />
+          <div className="flex border-b-2 items-center">
+            <div className=" mt-2  text-center font-semibold lg:text-start">
+              <h1 className="text-2xl  font-bold">Provider Info:</h1>
+              <div>
+                <p className="mb-2 text-xl">Name: {providerName}</p>
+                
+                <div className="avatar">
+                  <div className="w-32 rounded">
+                    <img src={providerImage} />
+                  </div>
+                </div>
+                <p className="mb-2 text-xl">Email: {providerEmail}</p>
+              </div>
+            </div>
+           
+          </div>
+        </div>
+        <div  className="w-full">
+        <Link to={`/forPurchase/${_id}`}><button className="btn w-full mt-2 bg-emerald-500">Book Now</button></Link>
         </div>
       </div>
     </div>

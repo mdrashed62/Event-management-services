@@ -70,13 +70,13 @@ const ForPurchase = () => {
           Swal.fire({
             position: "top",
             icon: "success",
-            title: "Service has been added",
+            title: "Successfully Purchased",
             showConfirmButton: false,
             timer: 2000,
           });
         }
       });
-    // form.reset();
+    form.reset();
     }
 
     return (

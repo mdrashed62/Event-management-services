@@ -4,7 +4,7 @@ const ServiceDetails = () => {
   const serviceDetails = useLoaderData();
   const { id } = useParams();
   const services = serviceDetails.find((service) => service._id === id);
-
+  document.title = "Service Details | Epic Eventistry ";
   const {
     _id,
     price,

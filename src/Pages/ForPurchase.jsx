@@ -9,6 +9,7 @@ const ForPurchase = () => {
     const {user} = useContext(AuthContext)
     const { id } = useParams();
     const services = serviceDetails.find((service) => service._id === id);
+    document.title = "Purchase Service | Epic Eventistry ";
   
     const {
       _id,

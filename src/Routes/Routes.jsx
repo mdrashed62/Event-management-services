@@ -5,13 +5,14 @@ import Home from "../Pages/Home/Home";
 
 import AddServices from "../Pages/AddServices";
 import ManageServices from "../Pages/ManageServices";
-import BookedServices from "../Pages/BookedServices";
 import ServiceToDo from "../Pages/ServiceToDo";
 import Services from "../Pages/Services";
 import Login from "../Components/Login";
 import Register from "../Components/Register";
 import ServiceDetails from "../Pages/ServiceDetails";
 import ForPurchase from "../Pages/ForPurchase";
+import UpdateServices from "../Pages/UpdateServices";
+import PurchasedServices from "../Pages/PurchasedServices";
 
 
 const router = createBrowserRouter([
@@ -55,11 +56,17 @@ const router = createBrowserRouter([
         },
         {
             path: '/bookedServices',
-            element: <BookedServices></BookedServices>
+            element: <PurchasedServices></PurchasedServices>
         },
         {
             path: '/serviceToDo',
             element: <ServiceToDo></ServiceToDo>
+        },
+        {
+            path: '/updateServices/:id',
+            element: <UpdateServices></UpdateServices>,
+            loader: ({params}) => fetch(`http://localhost:5000/services/${params.id}`)
+            
         }
       ]
     },

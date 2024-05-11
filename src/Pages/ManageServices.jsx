@@ -5,7 +5,7 @@ import ManageServiceCards from "./ManageServiceCards";
 
 const ManageServices = () => {
     const [services, setServices] = useState([]);
-  
+    document.title = "Manage Service | Epic Eventistry ";
     useEffect(() => {
         const getServicesData = async () => {
           try {

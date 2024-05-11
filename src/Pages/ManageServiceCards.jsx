@@ -1,10 +1,11 @@
 
 import PropTypes from "prop-types";
 import { useState } from "react";
+import { Link } from "react-router-dom";
 import Swal from "sweetalert2";
 
 const ManageServiceCards = ({service}) => {
-    const [services, setServices] = useState()
+    const [isDeleted, setIsDeleted] = useState(false);
     const {
         _id,
         price,
@@ -15,7 +16,7 @@ const ManageServiceCards = ({service}) => {
         description,
       } = service;
 
-      const handleDelete = (id) => {
+      const handleDelete = () => {
         Swal.fire({
           title: "Are you sure?",
           text: "You won't be able to revert this!",
@@ -35,11 +36,10 @@ const ManageServiceCards = ({service}) => {
                 if (data.deletedCount > 0) {
                   Swal.fire({
                     title: "Deleted!",
-                    text: "Your Spot has been deleted.",
+                    text: "Your Service has been deleted.",
                     icon: "success",
                   });
-                  const remaining = services.filter(service => service._id !== id)
-                  setServices(remaining)
+                 setIsDeleted(true)
                 }
               });
           }
@@ -49,7 +49,10 @@ const ManageServiceCards = ({service}) => {
       const shortDescText = description
         ? description.slice(0, 100)
         : "Description not available";
-    console.log(service)
+
+        if (isDeleted) {
+            return null;
+          }
     return (
         <div className="card  bg-base-100 shadow-xl">
       <figure className="px-10 pt-10">
@@ -70,19 +73,16 @@ const ManageServiceCards = ({service}) => {
           <p className="font-bold">{providerName}</p>
         </div>
 
-        <div className="flex  justify-between mt-4 w-full">
-            <button className="btn w-[45%] bg-sky-500">Update</button>
-            <button onClick={() => handleDelete(_id)} className="btn bg-red-500 w-[45%]">Delete</button>
+        <div className="flex justify-between mt-4 w-full">
+           <div className="w-[45%]">
+           <Link to={`/updateServices/${_id}`}><button className="btn w-full bg-[#AA14F0]">Edit</button></Link>
+           </div>
+            <div className="w-[45%]">
+            <button onClick={() => handleDelete(_id)} className="btn w-full bg-red-500">Delete</button>
+            </div>
         </div>
 
-        {/* <div className="w-full ">
-          <Link to={`/serviceDetails/${_id}`}>
-            {" "}
-            <button className="btn mt-4 md:20 lg:px-24 bg-green-500">
-              View Details
-            </button>
-          </Link>
-        </div> */}
+       
       </div>
     </div>
     );

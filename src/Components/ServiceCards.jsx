@@ -5,8 +5,9 @@ import { Link } from "react-router-dom";
 
 
 const ServiceCards = () => {
-    
+
     const [services, setServices] = useState([]);
+    document.title = "All Services | Epic Eventistry ";
   
     useEffect(() => {
         const getServicesData = async () => {

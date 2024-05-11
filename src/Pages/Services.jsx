@@ -5,6 +5,7 @@ import AllServices from "./AllServices";
 
 const Services = () => {
     const [services, setServices] = useState([]);
+    document.title = "Services | Epic Eventistry ";
   
     useEffect(() => {
         const getServicesData = async () => {

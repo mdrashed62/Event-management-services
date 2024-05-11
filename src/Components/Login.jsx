@@ -10,6 +10,8 @@ const Login = () => {
   const location = useLocation();
   const navigate = useNavigate();
 
+  document.title = "Login | Epic Eventistry ";
+
   const [showPassword, setShowPassword] = useState()
 
   const handleLogin = (e) => {

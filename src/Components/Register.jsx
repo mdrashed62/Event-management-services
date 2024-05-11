@@ -11,6 +11,7 @@ const Register = () => {
   const [registerError, setRegisterError] = useState('')
   const [showPassword, setShowPassword] = useState(false);
   
+  document.title = "Register | Epic Eventistry ";
 
     const {createUser, updateUserData, setUser} = useContext(AuthContext)
     const navigate = useNavigate()

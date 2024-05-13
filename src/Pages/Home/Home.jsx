@@ -4,7 +4,7 @@ import Banner from "./Banner";
 
 
 const Home = () => {
-    document.title = "Home | Epic Eventistry ";
+    document.title = " Home | Epic Eventistry ";
    
     return (
         <div>

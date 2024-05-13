@@ -1,5 +1,4 @@
 import { Link } from "react-router-dom";
-import PropTypes from "prop-types";
 
 const SingleServices = ({ service }) => {
   const {
@@ -19,7 +18,7 @@ const SingleServices = ({ service }) => {
   return (
     <div className="card  bg-base-100 shadow-xl">
       <figure className="px-10 pt-10">
-        <img src={imgURL} className="rounded-xl h-64 w-72" />
+        <img src={imgURL} className="rounded-xl h-80 w-96" />
       </figure>
       <div className="card-body items-center text-center">
         <div className="flex justify-between gap-10">
@@ -48,15 +47,5 @@ const SingleServices = ({ service }) => {
     </div>
   );
 };
-SingleServices.propTypes = {
-    service: PropTypes.shape({
-      _id: PropTypes.string.isRequired,
-      imgURL: PropTypes.string.isRequired,
-      serviceName: PropTypes.string.isRequired,
-      providerImage: PropTypes.string.isRequired,
-      providerName: PropTypes.string.isRequired,
-      description: PropTypes.string.isRequired,
-      price: PropTypes.string.isRequired,
-    }).isRequired,
-  };
+
 export default SingleServices;

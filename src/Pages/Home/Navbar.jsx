@@ -1,64 +1,73 @@
-import { useContext, useState } from "react";
-
+import { useContext, useState, useEffect } from "react";
 import { AuthContext } from "../../Providers/AuthProvider";
-import logo from '../../assets/logo.jpg'
+import logo from "../../assets/logo.jpg";
 import { Link, NavLink, useNavigate } from "react-router-dom";
 
 const Navbar = () => {
+  const [theme, setTheme] = useState(() => {
+    return localStorage.getItem("theme") || "light";
+  });
 
-    const [theme, setTheme] = useState("light");
-    const { user, logOut } = useContext(AuthContext);
-    const navigate = useNavigate();
+  const { user, logOut } = useContext(AuthContext);
+  console.log(user)
+  const navigate = useNavigate();
 
-    const handleSignOut = () => {
-      logOut()
-        .then(() => navigate("/"))
-        .catch();
-    };
+  useEffect(() => {
+    document.documentElement.setAttribute("data-theme", theme);
+  }, [theme]);
 
   const handleTheme = () => {
     const newTheme = theme === "light" ? "dark" : "light";
     setTheme(newTheme);
     document.documentElement.setAttribute("data-theme", newTheme);
-  };
-  
-    const navLinks = (
-       <>
-       <li>
-        <NavLink to='/'>Home</NavLink>
-       </li>
 
-       <li className="ml-4 mr-4">
-        <NavLink to='/allServices'>All Services</NavLink>
-       </li>
-      {
-        user && (
-            <li>
-            <div className="dropdown dropdown-bottom z-50">
+    localStorage.setItem("theme", newTheme);
+  };
+
+  const handleSignOut = () => {
+    logOut()
+      .then(() => navigate("/"))
+      .catch();
+  };
+
+  const navLinks = (
+    <>
+      <li>
+        <NavLink to="/">Home</NavLink>
+      </li>
+
+      <li className="ml-4 mr-4">
+        <NavLink to="/allServices">All Services</NavLink>
+      </li>
+      {user && (
+        <li>
+          <div className="dropdown dropdown-bottom z-50">
             <button tabIndex={0}>Dashboard</button>
-            <ul tabIndex={0} className="dropdown-content z-[1] font-semibold menu p-2 shadow bg-sky-500 rounded-box w-52">
+            <ul
+              tabIndex={0}
+              className="dropdown-content z-[1] font-semibold menu p-2 shadow bg-sky-500 rounded-box w-52"
+            >
               <li>
-                <NavLink to='/addServices'>Add Services</NavLink>
+                <NavLink to="/addServices">Add Services</NavLink>
               </li>
               <li className="mt-2">
-                <NavLink to='/manageServices'>Manage Services</NavLink>
+                <NavLink to="/manageServices">Manage Services</NavLink>
               </li>
               <li className="mt-2 mb-2">
-                <NavLink to='/bookedServices'>Booked Services</NavLink>
+                <NavLink to="/bookedServices">Booked Services</NavLink>
               </li>
               <li>
-                <NavLink to='/serviceToDo'>Service To Do</NavLink>
+                <NavLink to="/serviceToDo">Service To Do</NavLink>
               </li>
             </ul>
-            </div>
-       </li>
-        )
-      }
-       </>
-    );
+          </div>
+        </li>
+      )}
+    </>
+  );
 
-    return (
-        <div className="navbar bg-base-100 mb-6">
+  return (
+    <div className="navbar bg-base-100 mb-6">
       <div className="navbar-start">
         <div className="dropdown lg:hidden">
           <div tabIndex={0} role="button" className="btn btn-ghost">
@@ -97,17 +106,22 @@ const Navbar = () => {
         <ul className="menu menu-horizontal px-1">{navLinks}</ul>
       </div>
 
-
-
       <div className="navbar-end flex items-center">
-      <label onClick={handleTheme} className="flex cursor-pointer ml-6 mr-4 gap-2">
+        <label
+          onClick={handleTheme}
+          className="flex cursor-pointer ml-6 mr-4 gap-2"
+        >
           <input type="checkbox" className="toggle theme-controller" />
         </label>
         {user ? (
           <div className="dropdown z-50 dropdown-bottom dropdown-hover dropdown-end">
-            <div tabIndex={0} role="button" className="flex items-center cursor-pointer">
+            <div
+              tabIndex={0}
+              role="button"
+              className="flex items-center cursor-pointer"
+            >
               <img
-                src={user.photoURL}
+                src={user?.photoURL}
                 className="w-12 h-12 rounded-full"
                 alt="User Profile"
               />
@@ -137,7 +151,7 @@ const Navbar = () => {
         )}
       </div>
     </div>
-    );
+  );
 };
 
 export default Navbar;

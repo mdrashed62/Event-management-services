@@ -14,12 +14,14 @@ import ForPurchase from "../Pages/ForPurchase";
 import UpdateServices from "../Pages/UpdateServices";
 import PurchasedServices from "../Pages/PurchasedServices";
 import PrivateRoute from "./PrivateRoute";
+import ErrorPage from "../Components/ErrorPage";
 
 
 const router = createBrowserRouter([
     {
       path: "/",
       element: <Root></Root>,
+      errorElement: <ErrorPage></ErrorPage>,
       children: [
         {
             path: '/',

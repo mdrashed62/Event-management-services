@@ -35,7 +35,7 @@ const AllServices = ({service}) => {
         <div>
         <h2 className="card-title text-3xl">{serviceName}</h2>
         </div>
-        <p className="w-[500px]">{shortDescText}</p>
+        <p className="lg:w-[500px]">{shortDescText}</p>
         
         <div  className="flex justify-between gap-10">
         <h2 className="card-title">{price}</h2>

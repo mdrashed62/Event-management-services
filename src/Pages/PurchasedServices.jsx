@@ -1,10 +1,12 @@
 import axios from "axios";
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import PurchasedServiceCards from "./PurchasedServiceCards";
+import { AuthContext } from "../Providers/AuthProvider";
 
 
 const PurchasedServices = () => {
     const [services, setServices] = useState([]);
+    const {user} = useContext(AuthContext)
     document.title = "Booked Services | Epic Eventistry ";
   
     useEffect(() => {
@@ -19,12 +21,15 @@ const PurchasedServices = () => {
         };
         getServicesData();
       }, []);
+
+      
+      const myServices = services?.filter(service => service.userEmail === user?.email)
     return (
-        <div>
+        <div className="grid grid-cols-1 mb-4 md:grid-cols-2 lg:grid-cols-3 gap-3">
         {services.length === 0 ? (
             <p>No purchased services available.</p>
         ) : (
-            services.map(service => <PurchasedServiceCards key={service._id} service={service}></PurchasedServiceCards>)
+          myServices.map(service => <PurchasedServiceCards key={service._id} service={service}></PurchasedServiceCards>)
         )}
     </div>
     );

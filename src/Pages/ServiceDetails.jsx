@@ -54,7 +54,7 @@ const ServiceDetails = () => {
           </div>
         </div>
         <div  className="w-full">
-        <Link to={`/forPurchase/${_id}`}><button className="btn w-full mt-2 bg-emerald-500">Book Now</button></Link>
+        <Link to={`/forPurchase/${_id}`}><button className="btn text-white w-full mt-2 text-xl font-semibold bg-emerald-500">Book Now</button></Link>
         </div>
       </div>
     </div>

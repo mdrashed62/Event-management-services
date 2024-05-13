@@ -1,5 +1,5 @@
 
-import PropTypes from "prop-types";
+
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import Swal from "sweetalert2";
@@ -87,15 +87,5 @@ const ManageServiceCards = ({service}) => {
     </div>
     );
 };
-ManageServiceCards.propTypes = {
-    service: PropTypes.shape({
-      _id: PropTypes.string.isRequired,
-      imgURL: PropTypes.string.isRequired,
-      serviceName: PropTypes.string.isRequired,
-      providerImage: PropTypes.string.isRequired,
-      providerName: PropTypes.string.isRequired,
-      description: PropTypes.string.isRequired,
-      price: PropTypes.string.isRequired,
-    }).isRequired,
-  };
+
 export default ManageServiceCards;

@@ -1,6 +1,4 @@
 import { Link } from "react-router-dom";
-import PropTypes from "prop-types";
-
 const AllServices = ({service}) => {
     const {
         _id,
@@ -54,16 +52,5 @@ const AllServices = ({service}) => {
     </div>
     );
 };
-AllServices.propTypes = {
-    service: PropTypes.shape({
-      _id: PropTypes.string.isRequired,
-      imgURL: PropTypes.string.isRequired,
-      serviceName: PropTypes.string.isRequired,
-      providerImage: PropTypes.string.isRequired,
-      providerName: PropTypes.string.isRequired,
-      description: PropTypes.string.isRequired,
-      price: PropTypes.string.isRequired,
-      serviceArea: PropTypes.string.isRequired,
-    }).isRequired,
-  };
+
 export default AllServices;

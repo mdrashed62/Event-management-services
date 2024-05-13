@@ -32,15 +32,15 @@ const Services = () => {
 
   return (
     <div className="mb-10">
-      <form onSubmit={handleSearch} className="mb-6 w-1/2 mx-auto">
-        <div>
+      <form onSubmit={handleSearch} className="mb-6 lg:w-1/2 mx-auto">
+        <div className="w-full mx-auto">
           <input
-            className="bg-gray-300 px-4 cursor py-2 w-[80%] rounded-md"
+            className="bg-gray-300 px-4 cursor mx-auto py-2 w-[50%] lg:w-[80%] rounded-md"
             placeholder="Search"
             type="text"
             name="search"
           />
-          <button className="px-4 py-2 ml-4 bg-[#008DDA] rounded-md">
+          <button className="px-6 lg:w-[15%] py-2 ml-4 bg-[#008DDA] rounded-md">
             Search
           </button>
         </div>

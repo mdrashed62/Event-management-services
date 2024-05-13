@@ -76,7 +76,7 @@ const Login = () => {
         </div>
        </div>
           <div className="form-control mt-6">
-            <button type="submit" className="btn  rounded-lg bg-green-500">
+            <button type="submit" className="btn text-white  rounded-lg bg-green-500">
               Login
             </button>
           </div>

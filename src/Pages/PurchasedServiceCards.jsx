@@ -1,9 +1,6 @@
 
-
-
-
 const PurchasedServiceCards = ({service}) => {
-    // const {user} = useContext(AuthContext)
+   
     console.log(service)
 
     const {
@@ -13,6 +10,8 @@ const PurchasedServiceCards = ({service}) => {
         serviceName,
         providerName,
         servicePlan,
+        serviceDate,
+        username
       } = service;
     
      
@@ -27,11 +26,18 @@ const PurchasedServiceCards = ({service}) => {
           <h2 className="card-title">{serviceName}</h2>
           <h2 className="card-title">{price}</h2>
           </div>
-          <p>{servicePlan}</p>
+          <p><span className="text-xl font-bold text-sky-600">Service Plan:</span> {servicePlan}</p>
            <div className="flex justify-between w-full">
             <p>Provider Name: </p>
             <p className="font-bold">{providerName}</p>
-           
+          </div>
+           <div className="flex justify-between w-full">
+            <p>Purchase Date: </p>
+            <p className="font-bold">{serviceDate}</p>
+          </div>
+           <div className="flex justify-between w-full">
+            <p>Purchaser: </p>
+            <p className="font-bold">{username}</p>
           </div>
   
         </div>

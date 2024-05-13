@@ -193,11 +193,11 @@ const ForPurchase = () => {
 
           <div className="md:flex gap-4 mb-4">
             <div className="md:w-1/2">
-              <span className="label-text">Service Plan</span>
+              <span className="label-text">Special instruction</span>
   
               <input
                 type="text"
-                placeholder="Service Plan"
+                placeholder="Instruction"
                 className="input input-bordered w-full"
                 name="servicePlan"
                 id=""

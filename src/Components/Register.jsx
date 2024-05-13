@@ -73,7 +73,7 @@ const Register = () => {
     }
 
     return (
-        <div data-aos='flip-down' data-aos-duration='2000' className="card shrink-0 w-full mb-6 max-w-sm shadow-2xl bg-base-100 mx-auto">
+        <div className="card shrink-0  w-full mb-6 max-w-sm shadow-2xl bg-base-300 mx-auto">
       <form onSubmit={handleRegister} className="card-body">
         <div className="form-control">
           <label className="label">

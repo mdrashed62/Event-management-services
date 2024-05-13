@@ -1,8 +1,24 @@
-# React + Vite
+# Epic Eventistry
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+# My selected category's name: [simple service-sharing web application]
 
-Currently, two official plugins are available:
+Live URL()
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+
+1) Responsive design: 
+ [Allows users to access and navigate your website easily on desktops, laptops, tablets, and smartphones.]
+
+2) Interactive event:
+ [Enables users to filter events by date, category, location, and type, making it easier to find relevant events.]
+
+3) Secure payment: 
+ [Offers multiple payment options, including credit/debit cards, PayPal, and other popular payment methods, to accommodate users' preferences.]
+
+4) Customizable event packages:
+ [Allows organizers to create, edit, and publish event details, including date, time, location, description, and pricing.]
+
+5) Social Media Integration: 
+ [Integrates social media sharing and promotion features to amplify event reach and engagement.]
+
+
+

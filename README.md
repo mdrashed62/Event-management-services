@@ -1,6 +1,6 @@
 # Epic Eventistry
 
-# My selected category's name: [Events management services]
+# My selected category's name: (Events management services)
 
 Live URL(https://simple-services-client.web.app)
 

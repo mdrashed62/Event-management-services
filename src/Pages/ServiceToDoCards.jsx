@@ -46,6 +46,8 @@ const ServiceToDoCards = ({ service }) => {
         return "bg-yellow-500";
       case "completed":
         return "bg-green-500";
+        default:
+          return "bg-red-500";
     }
   };
 
@@ -91,7 +93,7 @@ const ServiceToDoCards = ({ service }) => {
                 </button>
                 <ul className="menu dropdown-content">
                   <li>
-                    <button  onClick={() => handleStatusChange("Working")}>
+                    <button onClick={() => handleStatusChange("Working")}>
                       Working
                     </button>
                   </li>

@@ -39,19 +39,20 @@ const ServiceToDoCards = ({ service }) => {
       localStorage.removeItem(`serviceStatus-${_id}`);
     };
   }, [_id]);
-
+  
   const getButtonColor = () => {
     switch (selectedStatus.toLowerCase()) {
-      case "Pending": 
-      return "bg-red-500";
-      case "Working":
+      case "pending":
+        return "bg-red-500";
+      case "working":
         return "bg-yellow-500";
-      case "Completed":
+      case "completed":
         return "bg-green-500";
       default:
         return "bg-red-500";
     }
   };
+  
   
   return (
     <div className="overflow-x-auto">

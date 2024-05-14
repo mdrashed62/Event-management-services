@@ -23,7 +23,7 @@ const ServiceCards = () => {
 
   return (
     <div>
-      <h2 className="text-4xl font-bold text-center">Popular Services</h2>
+      <h2 className=" text-3xl lg:text-5xl font-bold text-center">Popular Services</h2>
       <div className="grid grid-cols-1 mb-4 md:grid-cols-2 lg:grid-cols-2 gap-3">
         {services.length > 0 &&
           services

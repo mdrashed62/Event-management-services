@@ -40,17 +40,6 @@ const ServiceToDoCards = ({ service }) => {
     };
   }, [_id]);
 
-  const getButtonColor = () => {
-    switch (selectedStatus.toLowerCase()) {
-      case "working":
-        return "bg-yellow-500";
-      case "completed":
-        return "bg-green-500";
-      default:
-        return "bg-red-500";
-    }
-  };
-  
   return (
     <div className="overflow-x-auto">
       <table className="table mb-24">
@@ -87,18 +76,32 @@ const ServiceToDoCards = ({ service }) => {
             <td>
               <div className="dropdown">
                 <button
-                  className={`btn text-white bg-red-500 btn-ghost btn-xs ${getButtonColor()}`}
+                  className={"btn text-white bg-red-500 btn-ghost btn-xs"}
                 >
                   {selectedStatus} <FaAngleDown />
                 </button>
                 <ul className="menu dropdown-content">
                   <li>
-                    <button onClick={() => handleStatusChange("Working")}>
+                    <button
+                      className={
+                        selectedStatus === "Working"
+                          ? "bg-blue-500"
+                          : "bg-gray-400"
+                      }
+                      onClick={() => handleStatusChange("Working")}
+                    >
                       Working
                     </button>
                   </li>
                   <li>
-                    <button onClick={() => handleStatusChange("Completed")}>
+                    <button
+                      className={
+                        selectedStatus === "Completed"
+                          ? "bg-green-500"
+                          : "bg-gray-400"
+                      }
+                      onClick={() => handleStatusChange("Completed")}
+                    >
                       Completed
                     </button>
                   </li>

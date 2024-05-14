@@ -2,7 +2,7 @@
 
 # My selected category's name: [Events management services]
 
-Live URL()
+Live URL(https://simple-services-client.web.app)
 
 
 1) Responsive design: 

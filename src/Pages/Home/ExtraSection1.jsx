@@ -5,16 +5,16 @@ const ExtraSection1 = () => {
         Upcoming Event
       </h1>
       <div>
-        <p className="text-2xl font-bold]">Summer Music Festival</p>
+        <p className="text-2xl font-bold text-white">Summer Music Festival</p>
         <p className="font-semibold mb-4">
           Saturday, June 15th, 2024, 10:00 AM - 6:00 PM.
         </p>
         <p className="mb-4">
-          <span className="text-2xl font-semibold">Location:</span> City Park Amphitheater, 123
+          <span className="text-2xl font-semibold text-white">Location:</span> City Park Amphitheater, 123
           Main Street, Anytown, USA
         </p>
         <p>
-          <span className="text-2xl font-bold">More Information:</span> Get ready to let loose and celebrate in style at our
+          <span className="text-2xl font-bold text-white">More Information:</span> Get ready to let loose and celebrate in style at our
           electrifying Party Event! Whether you re marking a milestone birthday,
           hosting a festive holiday gathering, or throwing a lively soirée just
           because, our event is the ultimate destination for fun, music, and

@@ -1,6 +1,6 @@
 # Epic Eventistry
 
-# My selected category's name: [simple service-sharing web application]
+# My selected category's name: [Events management services]
 
 Live URL()
 

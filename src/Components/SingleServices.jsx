@@ -38,7 +38,7 @@ const SingleServices = ({ service }) => {
         <div className="w-full ">
           <Link to={`/serviceDetails/${_id}`}>
             {" "}
-            <button className="btn mt-4 md:20 lg:px-24 bg-green-500">
+            <button className="btn mt-4 md:20 lg:px-24 text-white bg-green-500">
               View Details
             </button>
           </Link>

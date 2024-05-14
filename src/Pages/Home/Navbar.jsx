@@ -9,7 +9,7 @@ const Navbar = () => {
   });
 
   const { user, logOut } = useContext(AuthContext);
-  console.log(user)
+  // console.log(user)
   const navigate = useNavigate();
 
   useEffect(() => {
@@ -37,7 +37,7 @@ const Navbar = () => {
       </li>
 
       <li className="ml-4 mr-4">
-        <NavLink to="/allServices">All Services</NavLink>
+        <NavLink to="/allServices">Services</NavLink>
       </li>
       {user && (
         <li>
@@ -47,16 +47,16 @@ const Navbar = () => {
               tabIndex={0}
               className="dropdown-content z-[1] font-semibold menu p-2 shadow bg-sky-500 rounded-box w-52"
             >
-              <li>
+              <li className="text-white">
                 <NavLink to="/addServices">Add Services</NavLink>
               </li>
-              <li className="mt-2">
+              <li className="mt-2 text-white">
                 <NavLink to="/manageServices">Manage Services</NavLink>
               </li>
-              <li className="mt-2 mb-2">
+              <li className="mt-2 mb-2 text-white">
                 <NavLink to="/bookedServices">Booked Services</NavLink>
               </li>
-              <li>
+              <li className="text-white">
                 <NavLink to="/serviceToDo">Service To Do</NavLink>
               </li>
             </ul>

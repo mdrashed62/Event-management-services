@@ -39,7 +39,7 @@ const AddServices = () => {
 
     //send data to the server
 
-    fetch("http://localhost:5000/services", {
+    fetch("https://simple-services-server.vercel.app/services", {
       method: "POST",
       headers: {
         "content-type": "application/json",
@@ -48,7 +48,7 @@ const AddServices = () => {
     })
       .then((res) => res.json())
       .then((data) => {
-        console.log(data);
+        // console.log(data);
         if (data) {
           Swal.fire({
             position: "top",
@@ -64,7 +64,7 @@ const AddServices = () => {
 
   return (
     <div className=" mb-4  bg-gray-300 mt-6 p-20 rounded-lg">
-      <h3 className="text-4xl font-bold text-center mb-6">Add Services</h3>
+      <h3 className="text-4xl text-purple-500 font-bold text-center mb-6">Add Services</h3>
       <form onSubmit={handleAddServices}>
         {/* from name and quantity row */}
         <div className="md:flex gap-4 mb-4">
@@ -179,7 +179,7 @@ const AddServices = () => {
         <input
           type="submit"
           value="Add Services"
-          className="btn btn-block bg-green-500"
+          className="btn btn-block text-white bg-green-500"
         />
       </form>
     </div>

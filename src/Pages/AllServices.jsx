@@ -43,7 +43,7 @@ const AllServices = ({service}) => {
         <div className="w-full">
           <Link to={`/serviceDetails/${_id}`}>
             {" "}
-            <button className="btn w-1/2 mt-4 md:20 lg:px-24 bg-green-500">
+            <button className="btn w-1/2 mt-4 text-white md:20 lg:px-24 bg-green-500">
               View Details
             </button>
           </Link>

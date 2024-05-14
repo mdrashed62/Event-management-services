@@ -4,14 +4,16 @@ import AllServices from "./AllServices";
 
 const Services = () => {
   const [services, setServices] = useState([]);
-  const [searchTerm, setSearchTerm] = useState(""); 
+  const [searchTerm, setSearchTerm] = useState("");
   document.title = "All Services | Epic Eventistry ";
 
   useEffect(() => {
     const getServicesData = async () => {
       try {
-        const response = await axios.get("http://localhost:5000/services");
-        console.log("Response data:", response.data);
+        const response = await axios.get(
+          "https://simple-services-server.vercel.app/services"
+        );
+        // console.log("Response data:", response.data);
         setServices(response.data);
       } catch (error) {
         console.error("Error fetching services data:", error);
@@ -24,7 +26,6 @@ const Services = () => {
     e.preventDefault();
     setSearchTerm(e.target.search.value);
   };
-
 
   const filteredServices = services.filter((service) =>
     service.serviceName.toLowerCase().includes(searchTerm.toLowerCase())

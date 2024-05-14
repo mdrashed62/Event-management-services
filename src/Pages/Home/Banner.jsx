@@ -32,6 +32,7 @@ export default function Banner () {
       >
         <SwiperSlide>
           <Slide
+          
             image={img2}
             text={<>Crafting Extraordinary Events for <br />Extraordinary People</>}
           />

@@ -1,40 +1,45 @@
 import axios from "axios";
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import ServiceToDoCards from "./ServiceToDoCards";
-
+import { AuthContext } from "../Providers/AuthProvider";
 
 const ServiceToDo = () => {
+  const [services, setServices] = useState([]);
+  const {user} = useContext(AuthContext)
+  document.title = "Service To Do | Epic Eventistry ";
 
-    const [services, setServices] = useState([]);
-    document.title = "Service To Do | Epic Eventistry ";
-  
-    useEffect(() => {
-        const getServicesData = async () => {
-          try {
-            const response = await axios.get('http://localhost:5000/purchaseServices');
-            console.log("Response data:", response.data); 
-            setServices(response.data);
-          } catch (error) {
-            console.error("Error fetching services data:", error);
-          }
-        };
-        getServicesData();
-      }, []);
+  useEffect(() => {
+    const getServicesData = async () => {
+      try {
+        const response = await axios.get(
+          "https://simple-services-server.vercel.app/purchaseServices"
+        );
+        // console.log("Response data:", response.data);
+        setServices(response.data);
+      } catch (error) {
+        console.error("Error fetching services data:", error);
+      }
+    };
+    getServicesData();
+  }, []);
 
+  const myServices = services?.filter(
+    (service) => service.userEmail === user?.email
+  );
 
-   
-    return (
-        <div>
-        {services.length === 0 ? (
-            <p className="text-4xl font-semibold text-center">Purchase Services Unavailable</p>
-        ) : (
-            services.map(service => (
-                <ServiceToDoCards key={service._id} service={service}/>
-            ))
-        )}
-       </div>
-    );
+  return (
+    <div>
+      {myServices.length === 0 ? (
+        <p className="text-4xl font-semibold text-center">
+          No purchased services available.
+        </p>
+      ) : (
+        myServices.map((service) => (
+          <ServiceToDoCards key={service._id} service={service} />
+        ))
+      )}
+    </div>
+  );
 };
 
 export default ServiceToDo;
-

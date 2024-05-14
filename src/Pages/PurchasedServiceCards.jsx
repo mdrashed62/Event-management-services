@@ -1,7 +1,7 @@
 
 const PurchasedServiceCards = ({service}) => {
    
-    console.log(service)
+    // console.log(service)
 
     const {
     

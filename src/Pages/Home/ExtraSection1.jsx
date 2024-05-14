@@ -19,7 +19,7 @@ const ExtraSection1 = () => {
           hosting a festive holiday gathering, or throwing a lively soirée just
           because, our event is the ultimate destination for fun, music, and
           unforgettable memories. Step into a vibrant atmosphere pulsating with
-          energy and excitement as we create an immersive experience that will
+          energy and excitement as we create an immersive for experience that will
           leave you and your guests wanting more. From themed décor and dazzling
           lighting to dynamic entertainment and top-notch catering, our Party
           Event promises to elevate your celebrations to new heights

@@ -41,16 +41,16 @@ const ServiceToDoCards = ({ service }) => {
   }, [_id]);
 
   const getButtonColor = () => {
-    switch (selectedStatus) {
+    switch (selectedStatus.toLowerCase()) {
       case "working":
         return "bg-yellow-500";
       case "completed":
         return "bg-green-500";
-        default:
-          return "bg-red-500";
+      default:
+        return "bg-red-500";
     }
   };
-
+  
   return (
     <div className="overflow-x-auto">
       <table className="table mb-24">

@@ -5,16 +5,16 @@ const ExtraSection1 = () => {
         Upcoming Event
       </h1>
       <div>
-        <p className="text-2xl font-bold text-white">Summer Music Festival</p>
-        <p className="font-semibold mb-4">
+        <p className="text-2xl font-bold text-black">Summer Music Festival</p>
+        <p className="font-semibold mb-4 text-black">
           Saturday, June 15th, 2024, 10:00 AM - 6:00 PM.
         </p>
-        <p className="mb-4">
-          <span className="text-2xl font-semibold text-white">Location:</span> City Park Amphitheater, 123
+        <p className="mb-4 text-black">
+          <span className="text-2xl font-semibold text-black">Location:</span> City Park Amphitheater, 123
           Main Street, Anytown, USA
         </p>
-        <p>
-          <span className="text-2xl font-bold text-white">More Information:</span> Get ready to let loose and celebrate in style at our
+        <p className="text-black">
+          <span className="text-2xl font-bold text-black">More Information:</span> Get ready to let loose and celebrate in style at our
           electrifying Party Event! Whether you re marking a milestone birthday,
           hosting a festive holiday gathering, or throwing a lively soirée just
           because, our event is the ultimate destination for fun, music, and
@@ -26,7 +26,7 @@ const ExtraSection1 = () => {
         </p>
       </div>
       <div className="lg:w-[300px] mx-auto mt-4">
-        <button className="btn w-full bg-red-600">Register</button>
+        <button className="btn w-full text-white bg-red-600">Register</button>
       </div>
     </div>
   );

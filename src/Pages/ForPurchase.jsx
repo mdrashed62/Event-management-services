@@ -55,7 +55,7 @@ const ForPurchase = () => {
 
     //send data to the server for new collection
 
-    fetch("https://simple-services-server.vercel.app/purchaseServices", {
+    fetch("https://simple-services-server.vercel.app", {
       method: "POST",
       headers: {
         "content-type": "application/json",

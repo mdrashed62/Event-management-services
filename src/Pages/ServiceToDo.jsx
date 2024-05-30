@@ -5,14 +5,14 @@ import { AuthContext } from "../Providers/AuthProvider";
 
 const ServiceToDo = () => {
   const [services, setServices] = useState([]);
-  const {user} = useContext(AuthContext)
+  const { user } = useContext(AuthContext);
   document.title = "Service To Do | Epic Eventistry ";
 
   useEffect(() => {
     const getServicesData = async () => {
       try {
         const response = await axios.get(
-          "https://simple-services-server.vercel.app/purchaseServices"
+          "https://simple-services-server.vercel.app"
         );
         // console.log("Response data:", response.data);
         setServices(response.data);

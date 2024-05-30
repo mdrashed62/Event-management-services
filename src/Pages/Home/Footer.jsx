@@ -2,10 +2,10 @@ import logo from '../../assets/logo.jpg'
 
 const Footer = () => {
   return (
-    <div className='bg-[#C9BBCF] p-6 mt-6 rounded-md'>
+    <div className='bg-[#C9BBCF] mt-6 rounded-md'>
       <div className="flex items-center text-xl justify-center md:text-2xl lg:text-5xl rounded-lg font-semibold">
           <div className="w-12 h-12">
-            <img className="rounded-lg" src={logo} alt="Logo" />
+            <img className="rounded-lg" src={logo} alt="Logo"/>
           </div>
           <p className="text-green-500 ml-4 font-bold">Epic Eventistry</p>
         </div>

@@ -17,7 +17,7 @@ const ServiceToDoCards = ({ service }) => {
 
     try {
       const response = await fetch(
-        `https://simple-services-server.vercel.app/purchaseServices/${_id}`,
+        `https://simple-services-server.vercel.app/${_id}`,
         {
           method: "PATCH",
           headers: {
@@ -39,7 +39,7 @@ const ServiceToDoCards = ({ service }) => {
       localStorage.removeItem(`serviceStatus-${_id}`);
     };
   }, [_id]);
-  
+
   const getButtonColor = () => {
     switch (selectedStatus.toLowerCase()) {
       case "pending":
@@ -52,8 +52,7 @@ const ServiceToDoCards = ({ service }) => {
         return "bg-red-500";
     }
   };
-  
-  
+
   return (
     <div className="overflow-x-auto">
       <table className="table mb-24">

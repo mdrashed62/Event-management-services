@@ -12,7 +12,7 @@ const PurchasedServices = () => {
     const getServicesData = async () => {
       try {
         const response = await axios.get(
-          "https://simple-services-server.vercel.app/purchaseServices"
+          "https://simple-services-server.vercel.app"
         );
         // console.log("Response data:", response.data);
         setServices(response.data);
@@ -29,7 +29,9 @@ const PurchasedServices = () => {
   return (
     <div className="grid grid-cols-1 mb-4 md:grid-cols-2 lg:grid-cols-3 gap-3">
       {myServices.length === 0 ? (
-        <p className="text-3xl text-red-500 font-bold">No purchase services available.</p>
+        <p className="text-3xl text-red-500 font-bold">
+          No purchase services available.
+        </p>
       ) : (
         myServices.map((service) => (
           <PurchasedServiceCards

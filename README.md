@@ -5,6 +5,8 @@
 
 # Project Overview:
 Event Management aims to provide an intuitive platform for organizing and participating in events. It focuses on delivering a user-friendly interface for event registration and profile management, eliminating the complexities of event planning and participation. The platform is designed to be accessible and efficient, catering to the needs of both event organizers and participants.
+# Technology Used: 
+
 # Fetures 
 1) Event Browsing and Registration:
 Users can explore a wide range of events and register for the ones that interest them, providing a seamless event discovery and participation experience.
@@ -12,7 +14,7 @@ Users can explore a wide range of events and register for the ones that interest
 2) Profile Management:
 Users can easily update their information during registration and view/edit their profiles at any time, ensuring their details are always current.
 
-3)User Authentication:
+3) User Authentication:
 Secure authentication ensures that user data is protected and only authorized users can access their profiles and event registrations.
 
 # Project Clone and Local Run Instructions:

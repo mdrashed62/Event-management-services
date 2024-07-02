@@ -6,7 +6,8 @@
 # Project Overview:
 Event Management aims to provide an intuitive platform for organizing and participating in events. It focuses on delivering a user-friendly interface for event registration and profile management, eliminating the complexities of event planning and participation. The platform is designed to be accessible and efficient, catering to the needs of both event organizers and participants.
 # Technology Used: 
-
+React js, Javascript, Node js, MongoDB, Express js, React Router, Firebase, Vercel, Tailwind, Daisy-Ui, React
+Awesome Components.
 # Fetures 
 1) Event Browsing and Registration:
 Users can explore a wide range of events and register for the ones that interest them, providing a seamless event discovery and participation experience.

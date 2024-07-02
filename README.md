@@ -1,7 +1,6 @@
 # Epic Eventistry
 
-# Live URL:  
-(https://simple-services-client.web.app)
+# Live URL:  (https://simple-services-client.web.app)
 
 # Project Overview:
 Event Management aims to provide an intuitive platform for organizing and participating in events. It focuses on delivering a user-friendly interface for event registration and profile management, eliminating the complexities of event planning and participation. The platform is designed to be accessible and efficient, catering to the needs of both event organizers and participants.

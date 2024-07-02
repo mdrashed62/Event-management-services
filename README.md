@@ -1,24 +1,25 @@
 # Epic Eventistry
 
-# My selected category's name: (Events management services)
+# Live URL:  
+(https://simple-services-client.web.app)
 
-Live URL(https://simple-services-client.web.app)
+# Project Overview:
+Event Management aims to provide an intuitive platform for organizing and participating in events. It focuses on delivering a user-friendly interface for event registration and profile management, eliminating the complexities of event planning and participation. The platform is designed to be accessible and efficient, catering to the needs of both event organizers and participants.
+# Fetures 
+1) Event Browsing and Registration:
+Users can explore a wide range of events and register for the ones that interest them, providing a seamless event discovery and participation experience.
 
+2) Profile Management:
+Users can easily update their information during registration and view/edit their profiles at any time, ensuring their details are always current.
 
-1) Responsive design: 
- [Allows users to access and navigate your website easily on desktops, laptops, tablets, and smartphones.]
+3)User Authentication:
+Secure authentication ensures that user data is protected and only authorized users can access their profiles and event registrations.
 
-2) Interactive event:
- [Enables users to filter events by date, category, location, and type, making it easier to find relevant events.]
-
-3) Secure payment: 
- [Offers multiple payment options, including credit/debit cards, PayPal, and other popular payment methods, to accommodate users' preferences.]
-
-4) Customizable event packages:
- [Allows organizers to create, edit, and publish event details, including date, time, location, description, and pricing.]
-
-5) Social Media Integration: 
- [Integrates social media sharing and promotion features to amplify event reach and engagement.]
-
-
+# Project Clone and Local Run Instructions:
+1) Clone the repository: [git clone https://github.com/mdrashed62/Event-management.git](https://github.com/mdrashed62/Event-management-services.git)
+2) Navigate to the project directory: cd event-management
+3) Install dependencies: npm install
+4) Set up environment variables: Create a .env file in the root directory.
+5) Start the development server: nodemon index.js
+6) Access the project: Open your web browser and navigate to http://localhost:5000.
 
